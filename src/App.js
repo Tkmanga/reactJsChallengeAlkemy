@@ -1,7 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+const axios = require('axios').default; 
 
 function App() {
+  axios.get('https://superheroapi.com/api/2228356823962414') 
+  .then((res) => {console.log(res)})
+  .catch((err) => {console.log(err)})
+  .then(() => {console.log('esto siempre se va ejecutar')})
   return (
     <div className="App">
       <header className="App-header">
@@ -15,7 +20,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn Programming
         </a>
       </header>
     </div>
